@@ -1,1 +1,1 @@
-# ubuntu_sertup
+# ubuntu_setup
