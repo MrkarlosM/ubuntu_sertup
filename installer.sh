@@ -23,7 +23,7 @@ instalar_paquete() {
 # Paquetes por categoría
 ENTORNO_GRAFICO=(xorg xinit x11-xserver-utils lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings)
 I3_UTILIDADES=(i3 i3status i3lock feh unzip zip thunar gvfs gvfs-backends network-manager network-manager-gnome)
-HERRAMIENTAS=(flameshot rofi git curl polybar picom vlc playerctl fonts-jetbrains-mono fonts-firacode alacritty zsh fonts-powerline brightnessctl)
+HERRAMIENTAS=(flameshot rofi git curl polybar picom vlc playerctl fonts-jetbrains-mono fonts-firacode alacritty zsh fonts-powerline brightnessctl neofetch)
 
 # Mostrar lo que se va a instalar
 echo "🔧 Los siguientes paquetes serán instalados:"
@@ -65,3 +65,39 @@ if [ "${#PAQUETES_FALLIDOS[@]}" -ne 0 ]; then
 else
   echo "🎉 Todos los paquetes fueron instalados correctamente."
 fi
+
+echo "Otorgando permisos a brave_install.sh..."
+sudo chmod +x brave_install.sh
+
+echo "Ejecutando brave_install.sh..."
+bash brave_install.sh
+
+echo "Otorgando permisos a ohmyzsh_setup.sh"
+sudo chmod +x ohmyzsh_setup.sh
+bash ohmyzsh_setup.sh
+
+echo "Otorgando permisos a alacritty_setup.sh"
+sudo chmod +x alacritty_setup.sh
+bash alacritty_setup.sh
+
+echo "Instalando wallpaper"
+sudo chmod +x wallpaper.sh
+bash wallpaper.sh
+
+echo "Configurando Picom"
+sudo chmod +x picom.sh
+bash picom.sh
+
+echo "Configurando zona horaria"
+sudo chmod +x set_timezone.sh
+bash sudo ./set_timezone.sh
+
+echo "Finalizando... copiando los archivos de configuración"
+sudo chmod +x copier.sh
+bash copier.sh
+
+
+
+
+
+
