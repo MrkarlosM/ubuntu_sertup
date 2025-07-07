@@ -90,13 +90,15 @@ bash picom.sh
 
 echo "Configurando zona horaria"
 sudo chmod +x set_timezone.sh
-bash sudo ./set_timezone.sh
+sudo bash  ./set_timezone.sh
 
 echo "Finalizando... copiando los archivos de configuración"
 sudo chmod +x copier.sh
 bash copier.sh
 
-
+# Reiniciar Zsh para aplicar los cambios
+echo "Reiniciando Zsh..."
+exec zsh -l
 
 
 

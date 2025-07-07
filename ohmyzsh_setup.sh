@@ -118,5 +118,5 @@ fi
 echo "✅ Configuración del tema Dracula aplicada correctamente."
 
 # Reiniciar Zsh para aplicar los cambios
-echo "Reiniciando Zsh..."
-exec zsh -l
+#echo "Reiniciando Zsh..."
+#exec zsh -l
